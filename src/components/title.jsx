@@ -18,10 +18,6 @@ const GradientTitle = styled.h1`
   `}
 `;
 
-const Title = () => (
-  <header>
-    <GradientTitle>PAGINATION</GradientTitle>
-  </header>
-);
+const Title = () => <GradientTitle>PAGINATION</GradientTitle>;
 
 export default Title;
