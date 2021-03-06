@@ -1,23 +1,22 @@
 import { createGlobalStyle } from 'styled-components';
-import { media } from '../utils';
 
 export const GlobalStyle = createGlobalStyle`
-  * {
+   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
 
-    ${media.mobile`
-      font-size: 12px;
-    `}
   }
 
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    font-family: 'Inter', serif;
+    font-size: 15px;
   }
 
+  h1 {
+    font-family: 'Inter', sans-serif;
+  }
   a {
     transition: .5s;
     cursor: pointer;
@@ -65,6 +64,7 @@ export const GlobalStyle = createGlobalStyle`
 
   p {
     line-height: 1.6;
+    font-family: 'Inter', sans-serif;
   }
 
   strong {
@@ -75,4 +75,3 @@ export const GlobalStyle = createGlobalStyle`
     font-size: inherit;
   }
 `;
-
