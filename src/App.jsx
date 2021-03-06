@@ -6,8 +6,7 @@ import Pagination from './components/pagination';
 import Item from './components/item';
 
 const StyledSection = styled.section`
-  padding-top: 30px;
-  height: 100vh;
+  padding: 40px 0px;
 `;
 
 const Container = styled.div`
@@ -22,10 +21,6 @@ const GridContainer = styled.div`
   ${media.tablet`
     grid-template-columns: repeat(1, minmax(0, 1fr));
   `}
-`;
-
-const GradientBg = styled.div`
-  background: linear-gradient(to top, rgba(224, 216, 255, 0.75) -67.22%, rgba(237, 245, 255, 0) 99.14%);
 `;
 
 const Wrapper = styled.div`
@@ -120,27 +115,27 @@ const App = () => {
 
   return (
     <Layout>
-      <GradientBg>
-        <StyledSection>
-          <Container>
-            <Wrapper>
-              <GridContainer>
-                {data.map(
-                  ({ id, name, category }, index) =>
-                    index >= page * entriesPerPage &&
-                    index < page * entriesPerPage + entriesPerPage && <Item id={id} name={name} category={category} />
-                )}
-              </GridContainer>
-              <Pagination
-                entriesPerPage={entriesPerPage}
-                onPageChange={handleChangePage}
-                total={data.length}
-                page={page}
-              />
-            </Wrapper>
-          </Container>
-        </StyledSection>
-      </GradientBg>
+      <StyledSection>
+        <Container>
+          <Wrapper>
+            <GridContainer>
+              {data.map(
+                ({ id, name, category }, index) =>
+                  index >= page * entriesPerPage &&
+                  index < page * entriesPerPage + entriesPerPage && (
+                    <Item key={index} id={id} name={name} category={category} />
+                  )
+              )}
+            </GridContainer>
+            <Pagination
+              entriesPerPage={entriesPerPage}
+              onPageChange={handleChangePage}
+              total={data.length}
+              page={page}
+            />
+          </Wrapper>
+        </Container>
+      </StyledSection>
     </Layout>
   );
 };

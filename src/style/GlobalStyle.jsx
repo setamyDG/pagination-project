@@ -5,18 +5,18 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
   }
 
+  html {
+    height: 100%;
+    width: 100%;
+  }
   body {
     overflow-x: hidden;
     font-family: 'Inter', serif;
     font-size: 15px;
   }
 
-  h1 {
-    font-family: 'Inter', sans-serif;
-  }
   a {
     transition: .5s;
     cursor: pointer;
