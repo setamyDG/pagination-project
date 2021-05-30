@@ -7,6 +7,7 @@ export default {
     grey: '#d2d2d2',
     white: '#FFF',
     gradientText: 'linear-gradient(to bottom, #4c2898aa 10%, #4115a000 90%)',
+    purple: '#4c2898aa',
   },
   boxShadows: {
     base: '0px 0px 20px 0px rgba(0,0,0,0.2)',

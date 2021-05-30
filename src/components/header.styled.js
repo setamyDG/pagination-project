@@ -23,26 +23,23 @@ const GradientTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.3;
-
-  ${media.desktop`
-    font-size: 4rem;
-    margin-top: 20px;
-
-  `}
 `;
 
-const AskMe = styled.button`
+const Button = styled.button`
   padding: 15px 45px;
   border-radius: 5px;
   border: 1px solid lightgray;
-  background: ${({ theme }) => theme.colors.white};
-  transition: box-shadow, color 0.35s ease-in-out;
-  color: ${({ theme }) => theme.colors.grey};
+  background: ${({ theme }) => theme.colors.purple};
+  transition: box-shadow 0.35s ease-in-out;
+  color: ${({ theme }) => theme.colors.white};
+  margin-left: ${({ marginLeft }) => (marginLeft ? '10px' : '0')};
   :hover {
     cursor: pointer;
     box-shadow: ${({ theme }) => theme.boxShadows.hover};
-    color: black;
   }
+  ${media.tablet`
+    display: none;
+  `}
 `;
 
-export { GradientTitle, StyledHeader, AskMe };
+export { GradientTitle, StyledHeader, Button };

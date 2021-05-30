@@ -18,8 +18,8 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Header ref={headerRef} />
       <GradientBg>
-        <Header ref={headerRef} />
         <StyledMain headerHeight={headerHeight}>{children}</StyledMain>
       </GradientBg>
     </ThemeProvider>
