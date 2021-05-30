@@ -1,18 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-import Title from './title';
+import { StyledHeader, GradientTitle, AskMe } from './header.styled';
 
-const StyledHeader = styled.header`
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-`;
-
-const Header = () => (
-  <StyledHeader>
-    <Title />
+const Header = React.forwardRef((_, ref) => (
+  <StyledHeader ref={ref}>
+    <GradientTitle>REACT - PAGINATION</GradientTitle>
+    <AskMe>ASK ME</AskMe>
   </StyledHeader>
-);
+));
 
 export default Header;

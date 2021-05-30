@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import { GlobalStyle } from '../style/GlobalStyle';
 import theme from '../style/theme';
 import Header from './header';
-import Footer from './footer';
-import { StyledContainer, StyledMain, GradientBg } from './layout.styled';
+import { GradientBg, StyledMain } from './layout.styled';
 
-const Layout = ({ children }) => (
-  <ThemeProvider ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <GradientBg>
-      <Header />
-      <StyledContainer>
-        <StyledMain>{children}</StyledMain>
-        <Footer />
-      </StyledContainer>
-    </GradientBg>
-  </ThemeProvider>
-);
+const Layout = ({ children }) => {
+  const headerRef = useRef();
+
+  const [headerHeight, setHeaderHeight] = useState(0);
+
+  useEffect(() => {
+    setHeaderHeight(headerRef.current?.offsetHeight || 0);
+  }, []);
+
+  return (
+    <ThemeProvider ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <GradientBg>
+        <Header ref={headerRef} />
+        <StyledMain headerHeight={headerHeight}>{children}</StyledMain>
+      </GradientBg>
+    </ThemeProvider>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

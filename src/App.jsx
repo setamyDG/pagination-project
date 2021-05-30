@@ -84,28 +84,28 @@ const App = () => {
     },
     {
       id: 9,
-      name: 'Iphone',
+      name: 'Samsung',
       category: 'Smartphone',
     },
     {
       id: 10,
-      name: 'Iphone',
-      category: 'Smartphone',
+      name: 'Audi',
+      category: 'Car',
     },
     {
       id: 11,
-      name: 'Iphone',
-      category: 'Smartphone',
+      name: 'BWM',
+      category: 'Car',
     },
     {
       id: 12,
-      name: 'Iphone',
-      category: 'Smartphone',
+      name: 'Mazda',
+      category: 'Car',
     },
     {
       id: 13,
-      name: 'Iphone',
-      category: 'Smartphone',
+      name: 'Cassandra',
+      category: 'Database',
     },
   ];
 

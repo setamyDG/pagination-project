@@ -13,13 +13,14 @@ const StyledItem = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  margin: 10px 0px;
+  margin: 25px 0px;
 `;
 
 const CircleContaienr = styled.div`
   width: 25px;
   height: 25px;
   display: flex;
+  padding: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;

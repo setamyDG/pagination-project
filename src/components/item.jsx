@@ -7,8 +7,8 @@ const Item = ({ id, name, category }) => (
     <CircleContaienr>
       <p>{id}</p>
     </CircleContaienr>
-    <StyledParagraph>name: {name}</StyledParagraph>
-    <StyledParagraph>category: {category}</StyledParagraph>
+    <StyledParagraph>Name: {name}</StyledParagraph>
+    <StyledParagraph>Category: {category}</StyledParagraph>
   </StyledItem>
 );
 

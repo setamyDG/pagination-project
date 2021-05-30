@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
   body {
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Inter', serif;
     font-size: 15px;
   }
