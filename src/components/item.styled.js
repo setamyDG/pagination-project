@@ -13,7 +13,7 @@ const StyledItem = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  margin: 25px 0px;
+  margin: 20px 0px;
 `;
 
 const CircleContaienr = styled.div`
