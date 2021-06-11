@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Layout from './components/layout';
-import Pagination from './components/pagination';
-import Item from './components/item';
 import { StyledSection, Container, GridContainer } from './app.styled';
 import { data } from './data';
+import { Item, Pagination } from './components';
+import { Layout } from './components/layout';
 
 const App = () => {
   const [mediaQuery, setMediaQuery] = useState({ matches: window.innerWidth > 768 });

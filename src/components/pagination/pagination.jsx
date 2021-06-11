@@ -13,11 +13,7 @@ const Pagination = ({ total, page, entriesPerPage, onPageChange }) => (
           key={index}
           active={index === page}
           onClick={() => {
-            if (page <= 0) {
-              onPageChange(index);
-            } else {
-              onPageChange(index);
-            }
+            onPageChange(index);
           }}
         />
       ))}

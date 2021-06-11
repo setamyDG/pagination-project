@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
-import { GlobalStyle } from '../style/GlobalStyle';
-import theme from '../style/theme';
-import Header from './header';
+import { GlobalStyle } from '../../../style/GlobalStyle';
+import theme from '../../../style/theme';
 import { GradientBg, StyledMain } from './layout.styled';
+import { Header } from '../header';
 
 const Layout = ({ children }) => {
   const headerRef = useRef();

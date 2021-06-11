@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, zIndex } from '../utils';
+import { media, zIndex } from '../../../utils';
 
 const StyledHeader = styled.header`
   position: fixed;
